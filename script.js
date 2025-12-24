@@ -2,14 +2,17 @@
 // SMOOTH SCROLL WITH HEADER OFFSET
 // ===================================
 const header = document.querySelector('.header');
-const getHeaderOffset = () => header ? header.offsetHeight : 75;
+const getHeaderOffset = () => {
+    const headerHeight = header ? header.offsetHeight : 75;
+    return headerHeight + 40; // 40px extra padding
+};
 
 const smoothScrollTo = (hash) => {
     const target = document.querySelector(hash);
     if (!target) return;
     
     const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-    const offsetPosition = targetPosition - getHeaderOffset() - 20;
+    const offsetPosition = targetPosition - getHeaderOffset();
     
     window.scrollTo({
         top: offsetPosition,

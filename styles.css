@@ -44,7 +44,7 @@ body {
 
 section {
     padding: var(--section-gap) 0;
-    scroll-margin-top: calc(var(--header-height) + 20px);
+    scroll-margin-top: calc(var(--header-height) + 40px);
 }
 
 .container {
@@ -385,31 +385,33 @@ a {
 }
 
 .about-text h3 {
-    margin-top: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--clr-primary);
+}
+
+.exp-list {
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.exp-list li {
+    position: relative;
+    padding-left: 2rem;
     color: var(--clr-text-light);
     font-size: 1.05rem;
     margin-bottom: 0.5rem;
 }
 
 .exp-list li::before {
-    content: attr(data-icon);
+    content: '';
     position: absolute;
     left: 0;
     color: var(--clr-accent);
     font-weight: 700;
-    font-size: 1.2
-    position: relative;
-    padding-left: 1.5rem;
-    color: var(--clr-text-light);
-}
-
-.exp-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--clr-accent);
-    font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .about-stats {
@@ -538,7 +540,6 @@ a {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
     transition: var(--transition);
     border: 1px solid rgba(201, 151, 109, 0.2);
-    group: gallery-item;
 }
 
 .gallery-item:hover {
