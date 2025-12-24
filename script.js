@@ -4,7 +4,7 @@
 const header = document.querySelector('.header');
 const getHeaderOffset = () => {
     const headerHeight = header ? header.offsetHeight : 75;
-    return headerHeight + 40; // 40px extra padding
+    return headerHeight + 15; // 15px extra padding
 };
 
 const smoothScrollTo = (hash) => {

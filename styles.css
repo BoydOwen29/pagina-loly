@@ -44,7 +44,7 @@ body {
 
 section {
     padding: var(--section-gap) 0;
-    scroll-margin-top: calc(var(--header-height) + 40px);
+    scroll-margin-top: calc(var(--header-height) + 15px);
 }
 
 .container {
