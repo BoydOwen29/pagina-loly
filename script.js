@@ -1,21 +1,50 @@
 // ===================================
+// MOBILE MENU - SIMPLE Y DIRECTO
+// ===================================
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    console.log('Hamburger encontrado:', !!hamburger);
+    console.log('Nav menu encontrado:', !!navMenu);
+    
+    if (!hamburger || !navMenu) {
+        console.error('No se encontró hamburger o nav-menu');
+        return;
+    }
+    
+    // Click en el hamburger
+    hamburger.addEventListener('click', (e) => {
+        console.log('Click en hamburger');
+        e.preventDefault();
+        e.stopPropagation();
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+    
+    // Click en un link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+});
+
+// ===================================
 // SMOOTH SCROLL WITH HEADER OFFSET
 // ===================================
-const header = document.querySelector('.header');
-const getHeaderOffset = () => {
-    const headerHeight = header ? header.offsetHeight : 75;
-    return headerHeight + 15; // 15px extra padding
-};
-
 const smoothScrollTo = (hash) => {
     const target = document.querySelector(hash);
     if (!target) return;
     
-    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-    const offsetPosition = targetPosition - getHeaderOffset();
+    // Detectar si es mobile
+    const isMobile = window.innerWidth <= 640;
+    const scrollOffset = isMobile ? 20 : 0;
+    const targetPosition = target.offsetTop - scrollOffset;
     
     window.scrollTo({
-        top: offsetPosition,
+        top: targetPosition,
         behavior: 'smooth'
     });
 };
@@ -29,7 +58,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         smoothScrollTo(href);
         
-        // Actualizar URL sin scroll
         if (history.pushState) {
             history.pushState(null, null, href);
         }
@@ -37,11 +65,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===================================
+// THROTTLE FUNCTION
+// ===================================
+const throttle = (func, limit) => {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+};
+
+// ===================================
 // HEADER SHADOW ON SCROLL
 // ===================================
-let lastScroll = 0;
+const header = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', throttle(() => {
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 50) {
@@ -49,9 +91,7 @@ window.addEventListener('scroll', () => {
     } else {
         header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
     }
-    
-    lastScroll = currentScroll;
-});
+}, 50));
 
 // ===================================
 // INTERSECTION OBSERVER ANIMATIONS
@@ -137,26 +177,31 @@ if ('loading' in HTMLImageElement.prototype) {
 // ACTIVE NAV LINK ON SCROLL
 // ===================================
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+const scrollOffset = 0;
 
-window.addEventListener('scroll', () => {
-    const scrollY = window.pageYOffset;
+window.addEventListener('scroll', throttle(() => {
+    const scrollY = window.scrollY;
+    const navLinks = document.querySelectorAll('.nav-link');
     
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - getHeaderOffset() - 100;
+        const sectionTop = section.offsetTop;
         const sectionBottom = sectionTop + section.offsetHeight;
         const sectionId = section.getAttribute('id');
         
-        if (scrollY >= sectionTop && scrollY < sectionBottom) {
+        // Considera el scroll offset para detectar mejor qué sección está visible
+        if (scrollY + scrollOffset >= sectionTop && scrollY + scrollOffset < sectionBottom) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${sectionId}`) {
                     link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.setAttribute('aria-current', 'false');
                 }
             });
         }
     });
-});
+}, 50));
 
 // ===================================
 // VIDEO CONTROLS OPTIMIZATION
@@ -181,23 +226,24 @@ if (video) {
 // ===================================
 // PARALLAX EFFECT EN HERO
 // ===================================
-const heroImage = document.querySelector('.hero-image img');
+const heroImage = document.querySelector('.hero-image');
+
 if (heroImage) {
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', throttle(() => {
         const scrollPosition = window.pageYOffset;
         const heroSection = document.querySelector('.hero');
         
         if (scrollPosition < heroSection.offsetHeight) {
             heroImage.style.transform = `translateY(${scrollPosition * 0.3}px)`;
         }
-    });
+    }, 30));
 }
 
 // ===================================
-// CONTACT FORM FOCUS EFFECTS
+// CONTACT LINK ANIMATIONS
 // ===================================
-const socialLinks = document.querySelectorAll('.social-link');
-socialLinks.forEach(link => {
+const contactLinks = document.querySelectorAll('.contact-link');
+contactLinks.forEach(link => {
     link.addEventListener('mouseenter', () => {
         link.style.animation = 'none';
         setTimeout(() => {
@@ -211,4 +257,3 @@ socialLinks.forEach(link => {
 // ===================================
 console.log('%c✨ LolyDeBarberin Portfolio', 'color: #c9976d; font-size: 18px; font-weight: bold; text-shadow: 0 0 10px rgba(201,151,109,0.5);');
 console.log('%cDesarrollado con arte y tecnología ❤️', 'color: #999; font-size: 12px;');
-console.log('%cVisita: https://github.com/BoydOwen29/pagina-loly', 'color: #666; font-size: 11px;');

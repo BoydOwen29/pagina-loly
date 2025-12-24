@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LolyDeBarberin - Actriz & Bailarina</title>
-    <meta name="description" content="Portfolio profesional de Loly De Barberin - Actriz y Bailarina especializada en danza contemporánea y teatro experimental">
+    <title>LolyDeBarberin - Actriz, Cantante & Performer</title>
+    <meta name="description" content="Portfolio profesional de Loly De Barberin - Actriz, Cantante y Performer especializada en comedia musical y performance teatral">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lolydebarberin.com">
+    <meta property="og:title" content="LolyDeBarberin - Actriz, Cantante & Performer">
+    <meta property="og:description" content="Portfolio profesional de comedia musical, actuación y performance">
+    <meta property="og:image" content="contenido/loly1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="canonical" href="https://lolydebarberin.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Poppins:wght@300;400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
@@ -16,6 +24,9 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="#inicio" class="logo">LolyDeBarberin</a>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                    <span></span>
+                </button>
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
                     <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
@@ -35,8 +46,8 @@
                 <div class="hero-content">
                     <p class="hero-subtitle">Artista Multidisciplinaria</p>
                     <h1>LolyDeBarberin</h1>
-                    <p class="tagline">Actriz • Bailarina • Performer</p>
-                    <p class="subtitle">Especializada en danza contemporánea, teatro experimental y actuación audiovisual. Llevo la narrativa del cuerpo a nuevos límites.</p>
+                    <p class="tagline">Actriz • Cantante • Performer</p>
+                    <p class="subtitle">Especializada en comedia musical con enfoque en actuación, canto y performance teatral. Transformo historias en experiencias memorables.</p>
                     <div class="hero-cta">
                         <a href="#galeria" class="btn btn-primary">Ver Trabajos</a>
                         <a href="#contacto" class="btn btn-secondary">Contactar</a>
@@ -44,7 +55,7 @@
                 </div>
                 <div class="hero-image">
                     <img src="contenido/loly1.jpg" alt="LolyDeBarberin - Artista" loading="lazy">
-                    <div class="hero-image-badge">Actriz & Bailarina</div>
+                    <div class="hero-image-badge">Actriz, Cantante & Performer</div>
                 </div>
             </div>
         </div>
@@ -57,18 +68,18 @@
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-highlight">
-                        Soy actriz y bailarina con formación integral en danza clásica, contemporánea y actuación para cine. Mi trabajo se caracteriza por la exploración profunda del movimiento corporal como herramienta narrativa, fusionando técnica, emoción y autenticidad.
+                        Soy actriz, cantante y performer especializada en comedia musical. Con formación integral en actuación, canto y movimiento escénico, mi trabajo destaca por la combinación de humor, técnica vocal y presencia teatral que conecta genuinamente con la audiencia.
                     </p>
                     <p>
-                        Con más de 10 años de experiencia en escena, he trabajado en teatro experimental, galas de danza, producciones audiovisuales y performances multidisciplinarias. Me especializo en crear personajes que desafían límites corporales y emocionales, buscando conectar profundamente con la audiencia.
+                        Con más de 10 años de experiencia en escena, he protagonizado musicales, works en comedia teatral, producciones audiovisuales y shows especiales. Me especializo en crear personajes auténticos y divertidos, dominando tanto el canto como la interpretación dramática y cómica.
                     </p>
                     <h3>Disciplinas & Especialidades</h3>
-                    <ul class="exp-list">
-                        <li>🎭 Danza Contemporánea & Coreografía</li>
-                        <li>🩰 Danza Clásica & Ballet</li>
-                        <li>🎬 Actuación Audiovisual & Cine</li>
-                        <li>🎪 Teatro Experimental & Performance</li>
-                        <li>🎨 Instalaciones & Arte Corporal</li>
+                    <ul class="exp-list" role="list">
+                        <li role="listitem">🎭 Comedia Musical & Dramaturgia</li>
+                        <li role="listitem">🎤 Canto & Performance Vocal</li>
+                        <li role="listitem">🎬 Actuación Audiovisual & Cine</li>
+                        <li role="listitem">🎪 Teatro Experimental & Performance</li>
+                        <li role="listitem">🎨 Instalaciones & Arte Corporal</li>
                     </ul>
                 </div>
                 <aside class="about-stats">
@@ -78,7 +89,7 @@
                     </div>
                     <div class="stat">
                         <h4>10+</h4>
-                        <p>Años de Danza</p>
+                        <p>Años de Comedia Musical</p>
                     </div>
                     <div class="stat">
                         <h4>Multilingüe</h4>
@@ -96,10 +107,8 @@
             
             <!-- VIDEO DESTACADO -->
             <div class="video-featured">
-                <div class="video(SHOWREEL) -->
-            <div class="video-featured">
-                <div class="video-container">
-                    <video controls poster="contenido/loly1.jpg" preload="metadata">
+                <div class="video-container" role="region" aria-label="Video showreel de LolyDeBarberin">
+                    <video controls poster="contenido/loly1.jpg" preload="metadata" title="Showreel profesional">
                         <source src="contenido/loly_video1.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de video.
                     </video>
@@ -107,50 +116,52 @@
                 </div>
                 <div class="video-info">
                     <h3>Mi Showreel Profesional</h3>
-                    <p>Compilación de mis tr data-project="Movimiento Libre">
+                    <p>Compilación de mis mejores momentos en comedia musical, actuación teatral y performance especial.</p>
+                </div>
+            </div>
+            
+            <!-- GALERÍA DE FOTOS -->
+            <div class="gallery-grid">
+                <figure class="gallery-item">
                     <img src="contenido/loly1.jpg" alt="Performance - Movimiento Libre (2024)" loading="lazy">
                     <figcaption class="gallery-overlay">
                         <span class="overlay-label">Performance</span>
                         <span class="overlay-title">Movimiento Libre</span>
                     </figcaption>
                 </figure>
-                <figure class="gallery-item" data-project="Siluetas">
+                <figure class="gallery-item">
                     <img src="contenido/loly2.jpg" alt="Danza - Siluetas (2023)" loading="lazy">
                     <figcaption class="gallery-overlay">
                         <span class="overlay-label">Danza Contemporánea</span>
                         <span class="overlay-title">Siluetas</span>
                     </figcaption>
                 </figure>
-                <figure class="gallery-item" data-project="Narrativas del Cuerpo">
+                <figure class="gallery-item">
                     <img src="contenido/loly3.jpg" alt="Teatro - Narrativas del Cuerpo (2023)" loading="lazy">
                     <figcaption class="gallery-overlay">
                         <span class="overlay-label">Teatro Experimental</span>
                         <span class="overlay-title">Narrativas del Cuerpo</span>
                     </figcaption>
                 </figure>
-                <figure class="gallery-item" data-project="Gala de Danza Clásica">
+                <figure class="gallery-item">
                     <img src="contenido/loly4.jpg" alt="Ballet - Gala de Danza Clásica (2022)" loading="lazy">
                     <figcaption class="gallery-overlay">
                         <span class="overlay-label">Ballet & Danza Clásica</span>
                         <span class="overlay-title">Gala Internacional</span>
                     </figcaption>
                 </figure>
-                <figure class="gallery-item" data-project="Proyecto 5">
-                    <img src="contenido/loly5.jpg" alt="Movimiento corporal expresivo" loading="lazy">
+                <figure class="gallery-item">
+                    <img src="contenido/loly5.jpg" alt="Instalación Artística - Cuerpo en Movimiento" loading="lazy">
                     <figcaption class="gallery-overlay">
                         <span class="overlay-label">Instalación Artística</span>
                         <span class="overlay-title">Cuerpo en Movimiento</span>
                     </figcaption>
                 </figure>
-                <figure class="gallery-item" data-project="Proyecto 6">
-                    <img src="contenido/loly6.jpg" alt="Arte escénico multidisciplinario" loading="lazy">
+                <figure class="gallery-item">
+                    <img src="contenido/loly6.jpg" alt="Artes Escénicas - Proyecto Especial" loading="lazy">
                     <figcaption class="gallery-overlay">
                         <span class="overlay-label">Artes Escénicas</span>
-                        <span class="overlay-title">Proyecto Especial
-                <figure class="gallery-item">
-                    <img src="contenido/loly6.jpg" alt="LolyDeBarberin - Arte Escénico" loading="lazy">
-                    <figcaption class="gallery-overlay">
-                        <span>Arte Escénico</span>
+                        <span class="overlay-title">Proyecto Especial</span>
                     </figcaption>
                 </figure>
             </div>
@@ -204,19 +215,16 @@
                 <div class="contact-methods">
                     <div class="contact-item">
                         <h3>📱 WhatsApp</h3>
-                        <a href="https://wa.me/5491123672843" target="_blank" rel="noopener" class="contact-link">
+                        <a href="https://wa.me/5491123672843" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Contactar por WhatsApp">
                             +54 9 11 2367-2843
                         </a>
                     </div>
                     
                     <div class="contact-item">
-                        <h3>🌐 Redes Sociales</h3>
-                        <div class="social-links">
-                            <a href="https://www.instagram.com/lolydebarberin/" target="_blank" rel="noopener" class="social-link">
-                                <span class="social-icon">📷</span>
-                                <span>Instagram</span>
-                            </a>
-                        </div>
+                        <h3>📸 Instagram</h3>
+                        <a href="https://www.instagram.com/lolydebarberin/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Ir a Instagram de LolyDeBarberin">
+                            @lolydebarberin
+                        </a>
                     </div>
                 </div>
             </div>
@@ -232,7 +240,7 @@
                     <p>Artista multidisciplinaria especializada en danza, actuación y performance.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Enlaces Rápidos</h4>
+                    <h4>Navegación</h4>
                     <ul>
                         <li><a href="#galeria">Galería</a></li>
                         <li><a href="#trayectoria">Trayectoria</a></li>
@@ -240,8 +248,11 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Redes Sociales</h4>
-                    <a href="https://www.instagram.com/lolydebarberin/" target="_blank" rel="noopener" class="footer-social">Instagram</a>
+                    <h4>Contacto</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="https://wa.me/5491123672843" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/lolydebarberin/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
