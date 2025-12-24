@@ -4,39 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LolyDeBarberin - Actriz & Bailarina</title>
+    <meta name="description" content="Portfolio profesional de Loly De Barberin - Actriz y Bailarina especializada en danza contemporánea y teatro experimental">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Poppins:wght@300;400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- NAVEGACIÓN -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">LolyDeBarberin</div>
-            <ul class="nav-menu">
-                <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-                <li><a href="#galeria" class="nav-link">Galería</a></li>
-                <li><a href="#videos" class="nav-link">Videos</a></li>
-                <li><a href="#trayectoria" class="nav-link">Trayectoria</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- HEADER NAVEGACIÓN -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#inicio" class="logo">LolyDeBarberin</a>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                    <li><a href="#galeria" class="nav-link">Galería</a></li>
+                    <li><a href="#trayectoria" class="nav-link">Trayectoria</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section id="inicio" class="hero">
+        <div class="hero-background"></div>
         <div class="container">
             <div class="hero-wrapper">
                 <div class="hero-content">
+                    <p class="hero-subtitle">Artista Multidisciplinaria</p>
                     <h1>LolyDeBarberin</h1>
-                    <p class="tagline">Actriz & Bailarina</p>
-                    <p class="subtitle">Danza, Actuación y Arte en Movimiento</p>
-                    <a href="#contacto" class="btn btn-primary">Contactar</a>
+                    <p class="tagline">Actriz • Bailarina • Performer</p>
+                    <p class="subtitle">Especializada en danza contemporánea, teatro experimental y actuación audiovisual. Llevo la narrativa del cuerpo a nuevos límites.</p>
+                    <div class="hero-cta">
+                        <a href="#galeria" class="btn btn-primary">Ver Trabajos</a>
+                        <a href="#contacto" class="btn btn-secondary">Contactar</a>
+                    </div>
                 </div>
                 <div class="hero-image">
-                    <img src="contenido/loly1.jpg" alt="LolyDeBarberin - Actriz y Bailarina">
+                    <img src="contenido/loly1.jpg" alt="LolyDeBarberin - Artista" loading="lazy">
+                    <div class="hero-image-badge">Actriz & Bailarina</div>
                 </div>
             </div>
         </div>
@@ -48,25 +56,22 @@
             <h2>Sobre Mí</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        Soy actriz y bailarina apasionada por el movimiento, la expresión corporal y la narrativa emocional. 
-                        Mi formación en danza clásica y contemporánea me permite crear personajes auténticos 
-                        que fusionan el arte del movimiento con la actuación.
+                    <p class="about-highlight">
+                        Soy actriz y bailarina con formación integral en danza clásica, contemporánea y actuación para cine. Mi trabajo se caracteriza por la exploración profunda del movimiento corporal como herramienta narrativa, fusionando técnica, emoción y autenticidad.
                     </p>
                     <p>
-                        Especializada en danza, teatro experimental y actuación. Me dedico a explorar 
-                        los límites entre cuerpo y emoción en cada proyecto que realizo.
+                        Con más de 10 años de experiencia en escena, he trabajado en teatro experimental, galas de danza, producciones audiovisuales y performances multidisciplinarias. Me especializo en crear personajes que desafían límites corporales y emocionales, buscando conectar profundamente con la audiencia.
                     </p>
-                    
-                    <h3>Especialidades</h3>
+                    <h3>Disciplinas & Especialidades</h3>
                     <ul class="exp-list">
-                        <li>Danza Contemporánea</li>
-                        <li>Danza Clásica & Ballet</li>
-                        <li>Teatro Experimental</li>
-                        <li>Performance & Instalaciones</li>
+                        <li>🎭 Danza Contemporánea & Coreografía</li>
+                        <li>🩰 Danza Clásica & Ballet</li>
+                        <li>🎬 Actuación Audiovisual & Cine</li>
+                        <li>🎪 Teatro Experimental & Performance</li>
+                        <li>🎨 Instalaciones & Arte Corporal</li>
                     </ul>
                 </div>
-                <div class="about-stats">
+                <aside class="about-stats">
                     <div class="stat">
                         <h4>20+</h4>
                         <p>Proyectos</p>
@@ -79,105 +84,112 @@
                         <h4>Multilingüe</h4>
                         <p>Español/Inglés/Francés</p>
                     </div>
-                </div>
+                </aside>
             </div>
         </div>
     </section>
 
-    <!-- GALERÍA -->
+    <!-- GALERÍA (FOTOS + VIDEO) -->
     <section id="galeria" class="gallery">
         <div class="container">
-            <h2>Galería de Fotos</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="contenido/loly1.jpg" alt="LolyDeBarberin - Portfolio 1">
-                    <div class="gallery-overlay">
-                        <p>Performance</p>
-                    </div>
+            <h2>Galería</h2>
+            
+            <!-- VIDEO DESTACADO -->
+            <div class="video-featured">
+                <div class="video(SHOWREEL) -->
+            <div class="video-featured">
+                <div class="video-container">
+                    <video controls poster="contenido/loly1.jpg" preload="metadata">
+                        <source src="contenido/loly_video1.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                    <div class="video-badge">SHOWREEL</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="contenido/loly2.jpg" alt="LolyDeBarberin - Portfolio 2">
-                    <div class="gallery-overlay">
-                        <p>Danza</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="contenido/loly3.jpg" alt="LolyDeBarberin - Portfolio 3">
-                    <div class="gallery-overlay">
-                        <p>Actuación</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="contenido/loly4.jpg" alt="LolyDeBarberin - Portfolio 4">
-                    <div class="gallery-overlay">
-                        <p>Teatro</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="contenido/loly5.jpg" alt="LolyDeBarberin - Portfolio 5">
-                    <div class="gallery-overlay">
-                        <p>Movimiento</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="contenido/loly6.jpg" alt="LolyDeBarberin - Portfolio 6">
-                    <div class="gallery-overlay">
-                        <p>Arte Escénico</p>
-                    </div>
-                </div>
+                <div class="video-info">
+                    <h3>Mi Showreel Profesional</h3>
+                    <p>Compilación de mis tr data-project="Movimiento Libre">
+                    <img src="contenido/loly1.jpg" alt="Performance - Movimiento Libre (2024)" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <span class="overlay-label">Performance</span>
+                        <span class="overlay-title">Movimiento Libre</span>
+                    </figcaption>
+                </figure>
+                <figure class="gallery-item" data-project="Siluetas">
+                    <img src="contenido/loly2.jpg" alt="Danza - Siluetas (2023)" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <span class="overlay-label">Danza Contemporánea</span>
+                        <span class="overlay-title">Siluetas</span>
+                    </figcaption>
+                </figure>
+                <figure class="gallery-item" data-project="Narrativas del Cuerpo">
+                    <img src="contenido/loly3.jpg" alt="Teatro - Narrativas del Cuerpo (2023)" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <span class="overlay-label">Teatro Experimental</span>
+                        <span class="overlay-title">Narrativas del Cuerpo</span>
+                    </figcaption>
+                </figure>
+                <figure class="gallery-item" data-project="Gala de Danza Clásica">
+                    <img src="contenido/loly4.jpg" alt="Ballet - Gala de Danza Clásica (2022)" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <span class="overlay-label">Ballet & Danza Clásica</span>
+                        <span class="overlay-title">Gala Internacional</span>
+                    </figcaption>
+                </figure>
+                <figure class="gallery-item" data-project="Proyecto 5">
+                    <img src="contenido/loly5.jpg" alt="Movimiento corporal expresivo" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <span class="overlay-label">Instalación Artística</span>
+                        <span class="overlay-title">Cuerpo en Movimiento</span>
+                    </figcaption>
+                </figure>
+                <figure class="gallery-item" data-project="Proyecto 6">
+                    <img src="contenido/loly6.jpg" alt="Arte escénico multidisciplinario" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <span class="overlay-label">Artes Escénicas</span>
+                        <span class="overlay-title">Proyecto Especial
+                <figure class="gallery-item">
+                    <img src="contenido/loly6.jpg" alt="LolyDeBarberin - Arte Escénico" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <span>Arte Escénico</span>
+                    </figcaption>
+                </figure>
             </div>
-        </div>
-    </section>
-
-    <!-- VIDEOS / SHOWREEL -->
-    <section id="videos" class="videos">
-        <div class="container">
-            <h2>Mi Showreel</h2>
-            <div class="video-container">
-                <video controls poster="contenido/loly1.jpg">
-                    <source src="contenido/loly_video1.mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
-            </div>
-            <p class="video-description">
-                Mi showreel compilado con escenas de mis trabajos más destacados
-            </p>
         </div>
     </section>
 
     <!-- TRAYECTORIA -->
-    <section id="trayectoria" class="filmografia">
+    <section id="trayectoria" class="trayectoria">
         <div class="container">
             <h2>Trayectoria</h2>
-            <div class="filmografia-list">
-                <div class="film-item">
-                    <div class="film-year">2024</div>
-                    <div class="film-info">
-                        <h4>"Movimiento Libre" - Performance</h4>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>"Movimiento Libre" - Performance</h3>
                         <p>Coreografía & Actuación - Producción independiente</p>
                     </div>
-                </div>
-                <div class="film-item">
-                    <div class="film-year">2023</div>
-                    <div class="film-info">
-                        <h4>"Siluetas" - Danza Contemporánea</h4>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>"Siluetas" - Danza Contemporánea</h3>
                         <p>Bailarina Solista - 8 presentaciones</p>
                     </div>
-                </div>
-                <div class="film-item">
-                    <div class="film-year">2023</div>
-                    <div class="film-info">
-                        <h4>"Narrativas del Cuerpo" - Teatro Experimental</h4>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>"Narrativas del Cuerpo" - Teatro Experimental</h3>
                         <p>Actuación & Movimiento</p>
                     </div>
-                </div>
-                <div class="film-item">
-                    <div class="film-year">2022</div>
-                    <div class="film-info">
-                        <h4>"Gala de Danza Clásica" - Ballet</h4>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h3>"Gala de Danza Clásica" - Ballet</h3>
                         <p>Bailarina Principal - Festival Internacional</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -187,25 +199,48 @@
         <div class="container">
             <h2>Contacto</h2>
             <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Ponte en Contacto</h3>
-                    <p class="contact-intro">¿Tenés un proyecto en mente? Escribime y trabajemos juntos.</p>
-                    
+                <p class="contact-intro">¿Tenés un proyecto en mente? Escribime y trabajemos juntos.</p>
+                
+                <div class="contact-methods">
                     <div class="contact-item">
-                        <h4>WhatsApp</h4>
-                        <p><a href="https://wa.me/5491123672843" target="_blank">+54 9 11 2367-2843</a></p>
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/5491123672843" target="_blank" rel="noopener" class="contact-link">
+                            +54 9 11 2367-2843
+                        </a>
                     </div>
                     
                     <div class="contact-item">
-                        <h4>Redes Sociales</h4>
+                        <h3>Redes Sociales</h3>
                         <div class="social-links">
-                            <a href="https://www.instagram.com/lolydebarberin/" target="_blank" class="social-link">
-                                <span class="social-icon">📷</span> Instagram
+                            <a href="https://www.instagram.com/lolydebarberin/" target="_blank" rel="noopener" class="social-link">
+                                <span class="social-icon">📷</span>
+                                <span>Instagram</span>
                             </a>
-                            <a href="#" class="social-link social-disabled" title="Próximamente">
-                                <span class="social-icon">🎵</span> TikTok
-                            </a>
-                        </div>
+                            <button class="social-link social-disabled" disabled title="Próximamente">
+                                <span class="social-icon">🎵</span>
+                                <span>TikTok</span>
+                            </button>
+             div class="footer-content">
+                <div class="footer-section">
+                    <h4>LolyDeBarberin</h4>
+                    <p>Artista multidisciplinaria especializada en danza, actuación y performance.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#trayectoria">Trayectoria</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociales</h4>
+                    <a href="https://www.instagram.com/lolydebarberin/" target="_blank" rel="noopener" class="footer-social">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LolyDeBarberin. Todos los derechos reservados.</p>
+            </div
                     </div>
                 </div>
             </div>
@@ -215,9 +250,10 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Lolydebarberin - Actriz & Bailarina. Todos los derechos reservados.</p>
+            <p>&copy; 2024 LolyDeBarberin - Actriz & Bailarina. Todos los derechos reservados.</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
