@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorpresa para Loly 🎭</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2a1f18 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .stars {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 600px;
+            text-align: center;
+            padding: 2rem;
+            z-index: 10;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .year {
+            color: #c9976d;
+            font-size: 0.9em;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 2rem 0;
+            color: #ccc;
+            font-weight: 300;
+        }
+
+        .message strong {
+            color: #c9976d;
+            font-weight: 600;
+        }
+
+        .cta {
+            margin-top: 3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: #c9976d;
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            animation: slideIn 0.8s ease 0.5s both;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn:hover {
+            background: #ddb589;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(201, 151, 109, 0.3);
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: #c9976d;
+            margin: 2rem auto;
+            opacity: 0;
+            animation: slideIn 0.8s ease 0.3s both;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 3rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .emoji {
+                font-size: 3rem;
+            }
+
+            .message {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🎭</div>
+        <h1>¡Sorpresa!</h1>
+        <div class="divider"></div>
+        <p class="year">Fin de año 2024</p>
+        
+        <p class="message">
+            Cerraste un tremendo año como artista donde <strong>cada vez la estás rompiendo más</strong>. 
+            Actuaciones memorables, performances que dejan huella, y una presencia que no pasa desapercibida.
+        </p>
+
+        <p class="message">
+            Por lo que <strong>no puede ser</strong> que todavía no tengas tu página con tu portfolio.
+        </p>
+
+        <p class="message">
+            <strong>¡Pero eso va a cambiar ahora!</strong>
+        </p>
+
+        <div class="cta">
+            <a href="index.html" class="btn">Ver tu Portfolio</a>
+        </div>
+
+        <p class="subtitle">✨ Tu presencia en internet comienza aquí ✨</p>
+    </div>
+
+    <script>
+        // Crear estrellas animadas
+        function createStars() {
+            for (let i = 0; i < 50; i++) {
+                const star = document.createElement('div');
+                star.className = 'stars';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                document.body.appendChild(star);
+            }
+        }
+
+        createStars();
+
+        // Auto-redirect después de 10 segundos (opcional)
+        // setTimeout(() => {
+        //     window.location.href = 'index.html';
+        // }, 10000);
+    </script>
+</body>
+</html>
